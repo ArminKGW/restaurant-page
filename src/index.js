@@ -1,1 +1,3 @@
-console.log("working");
+import displayHome from "./home.js";
+
+displayHome();
