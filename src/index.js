@@ -1,7 +1,9 @@
 import displayHome from "./home.js";
 import displayMenu from "./menu.js";
+import displayContact from "./contact.js";
 
-displayHome();
+const content = document.querySelector("#content");
+
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("home")){
         clearPage();
@@ -18,8 +20,13 @@ document.addEventListener("click", (e) => {
 });
 
 function clearPage(){
-    const content = document.querySelector("#content");
     while(content.firstChild){
         content.removeChild(content.firstChild);
     }
 }
+
+export default content;
+
+displayHome();
+
+

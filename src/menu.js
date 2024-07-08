@@ -1,10 +1,10 @@
 import {makeDiv} from "./home.js";
+import container from "./index.js";
 
-const container = document.querySelector("#content");
 
 function display(){
     const title = makeDiv(container);
-    title.classList.add("title");
+    title.classList.add("menu-title");
     title.textContent = "Menu";
     constructMainDishes();
     constructSideDishes();

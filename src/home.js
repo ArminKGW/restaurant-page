@@ -1,7 +1,4 @@
-const elements = (function(){
-    const content = document.querySelector("#content");
-    return {content};
-})();
+import container from "./index.js";
 
 function makeDiv(parent){
     const element = document.createElement("div");
@@ -10,8 +7,6 @@ function makeDiv(parent){
 }
 
 function display(){
-    const container = elements.content;
-
     const name = makeDiv(container);
     name.classList.add("name");
     name.textContent = "Baratie";
