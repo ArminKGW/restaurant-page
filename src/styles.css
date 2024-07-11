@@ -1,0 +1,177 @@
+:root{
+    --white-theme: rgb(239, 232, 232);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 1fr 70px;
+    background-color: var(--white-theme);
+}
+
+nav{
+    height: 100px;
+    background-color: rgb(89, 155, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+nav img{
+    height: auto;
+    width: 80px;
+}
+
+button{
+    height: 60px;
+    width: 100px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--white-theme);
+    border: 0;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#content{
+    display: grid;
+    align-items: center;
+    
+    background-repeat: repeat;
+    color: rgb(0, 0, 0);
+}
+
+.wrapper{
+    box-sizing: border-box;
+    width: 1000px;
+    margin: 12px auto;
+    border-radius: 1em;
+    padding: 2em 4em;
+    background-color: rgb(158, 199, 219);
+}
+
+.wrapper-home{
+    display: grid;
+    justify-items: center;
+    gap: 6em;
+}
+
+.home-name{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.home-headline{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.home-text{
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+
+.wrapper-menu{
+    display: grid;
+    grid-template: min-content 3fr 2fr 2fr / 700px;
+    justify-content: center;
+    gap: 80px;
+}
+
+.menu-title{
+    font-size: 4rem;
+    font-weight: 700;
+    justify-self: center;
+}
+
+.main-dishes-box, 
+.side-dishes-box,
+.beverage-box{
+    display: grid;
+    grid-template: 100px 1fr / calc((700px - 45%) / 2) 45% calc((700px - 45%) / 2);
+    row-gap: 50px;
+    place-items: center;
+}
+
+.main-dishes-title, 
+.side-dishes-title,
+.beverage-title{
+    grid-area: 1 / 2 / 1 / 3;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.main-dishes-cards, 
+.side-dishes-cards,
+.beverage-cards{
+    grid-area: 2 / 1 / -1 / -1;
+    display: grid;
+    gap: 32px;
+}
+
+.main-dishes-cards{
+    grid-template: repeat(3, 1fr) / 550px;
+}
+
+.side-dishes-cards,
+.beverage-cards{
+    grid-template: repeat(2, 1fr) / 550px;
+}
+
+.card{
+    display: grid;
+    grid-template: 1fr 3fr 150px 50px / 1fr 200px;
+    row-gap: 24px;
+}
+
+
+.name{
+    grid-area: 1 / 1 / 2 / -1;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.description{
+    grid-area: 2 / 1 / 3 / -1;
+    font-size: 1.1rem;
+    margin: 30px 24px 0 24px;
+}
+
+.price{
+    grid-area: 3 / 1 / 4 / -2;
+    font-weight: 700;
+    font-size: 1.4rem;
+    place-self: center;
+}
+
+.image{
+    grid-area: 3 / 2 / 5 / -1;
+    border: 2px solid purple;
+    border-radius: 8px;
+}
+
+.has-border{
+    box-sizing: border-box;
+    border: 12px solid rgb(120, 75, 6);
+    background-color: #FFA500;
+    padding: 12px 36px;
+    border-radius: 8px;
+}
+
+footer{
+    height: 70px;
+    background-color: rgb(82, 78, 78);
+    display: grid;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+}
+

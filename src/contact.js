@@ -1,9 +1,10 @@
 import {makeDiv} from "./home.js";
 import container from "./index.js";
+import body from "./index.js";
 
 function display(){
     const title = makeDiv(container);
-    title.classList.add("contact-title");
+    title.classList.add("contact-title", "has-border");
     title.textContent = "Contact Us";
     const contactBox = makeDiv(container);
     contactBox.classList.add("contact-box");
@@ -14,7 +15,7 @@ function display(){
 
 function constructChef(box){
     const chefCard = makeDiv(box);
-    chefCard.classList.add("chef-card");
+    chefCard.classList.add("chef-card", "has-border");
 
     const chefHeader = makeDiv(chefCard);
     chefHeader.classList.add("chef-header");
@@ -35,7 +36,7 @@ function constructChef(box){
 
 function constructManager(box){
     const managerCard = makeDiv(box);
-    managerCard.classList.add("manager-card");
+    managerCard.classList.add("manager-card", "has-border");
 
     const managerHeader = makeDiv(managerCard);
     managerHeader.classList.add("manager-header");
@@ -56,7 +57,7 @@ function constructManager(box){
 
 function constructWaiter(box){
     const waiterCard = makeDiv(box);
-    waiterCard.classList.add("waiter-card");
+    waiterCard.classList.add("waiter-card", "has-border");
 
     const waiterHeader = makeDiv(waiterCard);
     waiterHeader.classList.add("waiter-header");

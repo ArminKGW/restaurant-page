@@ -1,27 +1,29 @@
 import {makeDiv} from "./home.js";
 import container from "./index.js";
-
+import body from "./index.js";
 
 function display(){
-    const title = makeDiv(container);
-    title.classList.add("menu-title");
+    const wrapper = makeDiv(container);
+    wrapper.classList.add("wrapper", "wrapper-menu");
+    const title = makeDiv(wrapper);
+    title.classList.add("menu-title", "has-border");
     title.textContent = "Menu";
-    constructMainDishes();
-    constructSideDishes();
-    constructBeverages();
+    constructMainDishes(wrapper);
+    constructSideDishes(wrapper);
+    constructBeverages(wrapper);
 }
 
-function constructBeverages(){
-    const beverageBox = makeDiv(container);
+function constructBeverages(wrapper){
+    const beverageBox = makeDiv(wrapper);
     beverageBox.classList.add("beverage-box");
     const beverageTitle = makeDiv(beverageBox);
-    beverageTitle.classList.add("beverage-title");
+    beverageTitle.classList.add("beverage-title", "has-border");
     beverageTitle.textContent = "Beverages";
     const beverageCards = makeDiv(beverageBox);
     beverageCards.classList.add("beverage-cards");
     for(let i = 0; i < 2; i++){
         const beverageCard = makeDiv(beverageCards);
-        beverageCard.classList.add("beverage-card", "card");
+        beverageCard.classList.add("beverage-card", "card", "has-border");
         const beverageName = makeDiv(beverageCard);
         beverageName.classList.add("beverage-name", "name");
         const beverageDescription = makeDiv(beverageCard);
@@ -43,17 +45,17 @@ function constructBeverages(){
     }
 }
 
-function constructSideDishes(){
-    const sideDishesBox = makeDiv(container);
+function constructSideDishes(wrapper){
+    const sideDishesBox = makeDiv(wrapper);
     sideDishesBox.classList.add("side-dishes-box");
     const sideDishesTitle = makeDiv(sideDishesBox);
-    sideDishesTitle.classList.add("side-dishes-title");
+    sideDishesTitle.classList.add("side-dishes-title", "has-border");
     sideDishesTitle.textContent = "side Dishes";
     const sideDishesCards = makeDiv(sideDishesBox);
     sideDishesCards.classList.add("side-dishes-cards");
     for(let i = 0; i < 2; i++){
         const sideDishCard = makeDiv(sideDishesCards);
-        sideDishCard.classList.add("side-dish-card", "card");
+        sideDishCard.classList.add("side-dish-card", "card", "has-border");
         const sideDishName = makeDiv(sideDishCard);
         sideDishName.classList.add("side-dish-name", "name");
         const sideDishDescription = makeDiv(sideDishCard);
@@ -75,18 +77,18 @@ function constructSideDishes(){
     }
 }
 
-function constructMainDishes(){
+function constructMainDishes(wrapper){
 
-    const mainDishesBox = makeDiv(container);
+    const mainDishesBox = makeDiv(wrapper);
     mainDishesBox.classList.add("main-dishes-box");
     const mainDishesTitle = makeDiv(mainDishesBox);
-    mainDishesTitle.classList.add("main-dishes-title");
+    mainDishesTitle.classList.add("main-dishes-title", "has-border");
     mainDishesTitle.textContent = "Main Dishes";
     const mainDishesCards = makeDiv(mainDishesBox);
     mainDishesCards.classList.add("main-dishes-cards");
     for(let i = 0; i < 3; i++){
         const mainDishCard = makeDiv(mainDishesCards);
-        mainDishCard.classList.add("main-dish-card", "card");
+        mainDishCard.classList.add("main-dish-card", "card", "has-border");
         const mainDishName = makeDiv(mainDishCard);
         mainDishName.classList.add("main-dish-name", "name");
         const mainDishDescription = makeDiv(mainDishCard);
