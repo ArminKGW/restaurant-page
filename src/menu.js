@@ -1,6 +1,5 @@
 import {makeDiv} from "./home.js";
 import container from "./index.js";
-import body from "./index.js";
 
 function display(){
     const wrapper = makeDiv(container);
