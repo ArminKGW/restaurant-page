@@ -49,7 +49,7 @@ function constructSideDishes(wrapper){
     sideDishesBox.classList.add("side-dishes-box");
     const sideDishesTitle = makeDiv(sideDishesBox);
     sideDishesTitle.classList.add("side-dishes-title", "has-border");
-    sideDishesTitle.textContent = "side Dishes";
+    sideDishesTitle.textContent = "Side Dishes";
     const sideDishesCards = makeDiv(sideDishesBox);
     sideDishesCards.classList.add("side-dishes-cards");
     for(let i = 0; i < 2; i++){
